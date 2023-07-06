@@ -5,7 +5,7 @@ event.preventDefault(); console.log("Form submitted");
 var userId = document.getElementById("user-id").value;
 var password = document.getElementById("password").value;
 if (userId === "Administrator" && password === "Testuser") {
-window.location.href = "mainpage.html"; } else {
+window.location.href = "https://azs0264.github.io/msisproject/mainpage.html"; } else {
 alert("Invalid credentials. Please try again.");}});
 });
 
