@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html></html><head></head>
+<html><head>
 <link rel="stylesheet" href="styles.css">
 <script src="script.js"></script>
-<style>.print-button {margin-bottom: 20px;} .next-button {margin-left: 20px;} </style>
-</head><body></body>
+<style> .print-button {margin-bottom: 20px;} .next-button {margin-left: 20px;}
+</style></head><body>
 <h1>Processed ASN</h1>
 <div id="display-data"></div>
 <button class="print-button" onclick="window.print()">Print</button>
 <button class="next-button" onclick="window.location.href = 'https://azs0264.github.io/msisproject/schedule-shipment.html'">Next</button>
-<script></script>
+<script>
 const urlparams = new urlsearchparams(windos.location.search);
 const sapshipmentnumber = urlparams.get('sap-shipment-number');
 const plannedshipdate = urlparams.get('planned-ship-date');
@@ -20,13 +20,15 @@ const length = urlparams.get('length');
 const width = urlparams.get('width');
 const aesnumber = urlparams.get('aes-number');
 const displaydiv = document.getElementById('display-data');
-displaydiv.innerHTML = '
-<p>SAP Shipment Number: $(sapshipmentnumber)</p>
-<p>Planned Ship Date: $(plannedshipdate)</p>
-<p>Customer ID: $(customerid)</p>
-<p>Part Number: $(partnumber)</p>
-<p>Weight (in lbs.): $(weight)</p>
-<p>Height: $(height)</p>
-<p>Length: $(length)</p>
-<p>AES Number (if applicable): $(aesnumber)</p>';
+const displayDiv = document.getElementById('display-data');
+displayDiv.innerHTML = `
+<p>SAP Shipment Number: ${sapShipmentNumber}</p>
+<p>Planned Ship Date: ${plannedShipDate}</p>
+<p>Customer ID: ${customerId}</p>
+<p>Part Number: ${partNumber}</p>
+<p>Weight (in lbs.): ${weight}</p>
+<p>Height: ${height}</p>
+<p>Length: ${length}</p>
+<p>Width: ${width}</p>
+<p>AES Number (if applicable): ${aesNumber}</p> `;
 </script></body></html>
