@@ -33,41 +33,41 @@
     </table>
 
     <script>
-        var mockdata = [
-            {"SAPShipmentNumber": "900", "PlannedShipDate": "2023-06-20", "CustomerID": "CA1006", "PartNumber": "997-3450",
-            "CarrierID": "XYZ", "Weight": "1500", "Height": "60", "Length": "60", "Width": "60", "AESNumber": "NA"},
-            {"SAPShipmentNumber": "901", "PlannedShipDate": "2023-06-25", "CustomerID": "CB1001", "PartNumber": "997-6670",
-            "CarrierID": "ABA", "Weight": "500", "Height": "48", "Length": "36", "Width": "72", "AESNumber": "NA"},
-            {"SAPShipmentNumber": "908", "PlannedShipDate": "2023-06-29", "CustomerID": "CC4001", "PartNumber": "997-3450",
-            "CarrierID": "UPS", "Weight": "1500", "Height": "60", "Length": "60", "Width": "60", "AESNumber": "X2023062854321"},
-            {"SAPShipmentNumber": "910", "PlannedShipDate": "2023-07-02", "CustomerID": "CC5001", "PartNumber": "998-1150",
-            "CarrierID": "FDX", "Weight": "3500", "Height": "121", "Length": "101", "Width": "105", "AESNumber": "X2023070112345"},
-            {"SAPShipmentNumber": "999", "PlannedShipDate": "2023-07-14", "CustomerID": "CC5001", "PartNumber": "999-1150",
-            "CarrierID": "FDX", "Weight": "3500", "Height": "121", "Length": "101", "Width": "105", "AESNumber": "X2023070112345"}
-        ];
+    var mockdata = [
+    {"SAP Shipment Number": "900", "Planned Ship Date": "2023-06-20", "Customer ID": "CA1006", "Part Number": "997-3450",
+    "Carrier ID": "XYZ", "Weight": "1500", "Height": "60", "Length": "60", "Width": "60", "AES Number": "NA"},
+    {"SAP Shipment Number": "901", "Planned Ship Date": "2023-06-25", "Customer ID": "CB1001", "Part Number": "997-6670",
+    "Carrier ID": "ABA", "Weight": "500", "Height": "48", "Length": "36", "Width": "72", "AES Number": "NA"},
+    {"SAP Shipment Number": "908", "Planned Ship Date": "2023-06-29", "Customer ID": "CC4001", "Part Number": "997-3450",
+    "Carrier ID": "UPS", "Weight": "1500", "Height": "60", "Length": "60", "Width": "60", "AES Number": "X2023062854321"},
+    {"SAP Shipment Number": "910", "Planned Ship Date": "2023-07-02", "Customer ID": "CC5001", "Part Number": "998-1150",
+    "Carrier ID": "FDX", "Weight": "3500", "Height": "121", "Length": "101", "Width": "105", "AES Number": "X2023070112345"},
+    {"SAP Shipment Number": "999", "Planned Ship Date": "2023-07-14", "Customer ID": "CC5001", "Part Number": "999-1150",
+    "Carrier ID": "FDX", "Weight": "3500", "Height": "121", "Length": "101", "Width": "105", "AES Number": "X2023070112345"}
+];
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var tableBody = document.getElementById("shipment-table").getElementsByTagName("tbody")[0];
-            var rowsHTML = "";
+document.addEventListener('DOMContentLoaded', function() {
+    var tableBody = document.getElementById("shipment-table").getElementsByTagName("tbody")[0];
+    var rowsHTML = "";
 
-            for (var i = 0; i < mockdata.length; i++) {
-                var shipment = mockdata[i];
-                rowsHTML += "<tr>" +
-                    "<td>" + shipment.SAPShipmentNumber + "</td>" +
-                    "<td>" + shipment.PlannedShipDate + "</td>" +
-                    "<td>" + shipment.CustomerID + "</td>" +
-                    "<td>" + shipment.PartNumber + "</td>" +
-                    "<td>" + shipment.CarrierID + "</td>" +
-                    "<td>" + shipment.Weight + "</td>" +
-                    "<td>" + shipment.Height + "</td>" +
-                    "<td>" + shipment.Length + "</td>" +
-                    "<td>" + shipment.Width + "</td>" +
-                    "<td>" + shipment.AESNumber + "</td>" +
-                    "</tr>";
-            }
+    for (var i = 0; i < mockdata.length; i++) {
+        var shipment = mockdata[i];
+        rowsHTML += "<tr>" +
+            "<td>" + shipment["SAP Shipment Number"] + "</td>" +
+            "<td>" + shipment["Planned Ship Date"] + "</td>" +
+            "<td>" + shipment["Customer ID"] + "</td>" +
+            "<td>" + shipment["Part Number"] + "</td>" +
+            "<td>" + shipment["Carrier ID"] + "</td>" +
+            "<td>" + shipment["Weight"] + "</td>" +
+            "<td>" + shipment["Height"] + "</td>" +
+            "<td>" + shipment["Length"] + "</td>" +
+            "<td>" + shipment["Width"] + "</td>" +
+            "<td>" + shipment["AES Number"] + "</td>" +
+            "</tr>";
+    }
 
-            tableBody.innerHTML = rowsHTML;
-        });
+    tableBody.innerHTML = rowsHTML;
+});
     </script>
 </body>
 </html>
