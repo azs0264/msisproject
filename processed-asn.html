@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-<html><head>
-<link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
-<style> .print-button {margin-bottom: 20px;} .next-button {margin-left: 20px;}
-</style></head><body>
-<h1>Processed ASN</h1>
-<div id="display-data"></div>
-<button class="print-button" onclick="window.print()">Print</button>
-<button class="next-button" onclick="window.location.href = 'https://azs0264.github.io/msisproject/schedule-shipment.html'">Next</button>
-<script>
-const urlparams = new urlsearchparams(windos.location.search);
-const sapshipmentnumber = urlparams.get('sap-shipment-number');
-const plannedshipdate = urlparams.get('planned-ship-date');
-const customeridr = urlparams.get('customer-id');
-const partnumber = urlparams.get('part-number');
-const weight = urlparams.get('weight');
-const height = urlparams.get('height');
-const length = urlparams.get('length');
-const width = urlparams.get('width');
-const aesnumber = urlparams.get('aes-number');
-const displaydiv = document.getElementById('display-data');
-const displayDiv = document.getElementById('display-data');
-displayDiv.innerHTML = `
-<p>SAP Shipment Number: ${sapShipmentNumber}</p>
-<p>Planned Ship Date: ${plannedShipDate}</p>
-<p>Customer ID: ${customerId}</p>
-<p>Part Number: ${partNumber}</p>
-<p>Weight (in lbs.): ${weight}</p>
-<p>Height: ${height}</p>
-<p>Length: ${length}</p>
-<p>Width: ${width}</p>
-<p>AES Number (if applicable): ${aesNumber}</p> `;
-</script></body></html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .print-button {
+            margin-bottom: 20px;
+        }
+        .next-button {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Processed ASN</h1>
+    <div id="display-data">
+        <p>SAP Shipment Number: <span id="sap-shipment-number"></span></p>
+        <p>Planned Ship Date: <span id="planned-ship-date"></span></p>
+        <p>Customer ID: <span id="customer-id"></span></p>
+        <p>Part Number: <span id="part-number"></span></p>
+        <p>Weight (in lbs.): <span id="weight"></span></p>
+        <p>Height: <span id="height"></span></p>
+        <p>Length: <span id="length"></span></p>
+        <p>Width: <span id="width"></span></p>
+        <p>AES Number (if applicable): <span id="aes-number"></span></p>
+    </div>
+    <button class="print-button" onclick="window.print()">Print</button>
+    <button class="next-button" onclick="window.location.href = 'https://azs0264.github.io/msisproject/schedule-shipment.html'">Next</button>
+</body>
+</html>
