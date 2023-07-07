@@ -1,36 +1,29 @@
-
-    var mockdata = [
-    {"SAPShipmentNumber": "900", "PlannedShipDate": "2023-06-20", "CustomerID": "CA1006", "PartNumber": "997-3450",
-    "CarrierID": "XYZ", "Weight": "1500", "Height": "60", "Length": "60", "Width": "60", "AESNumber": "NA"},
-    {"SAPShipmentNumber": "901", "PlannedShipDate": "2023-06-25", "CustomerID": "CB1001", "PartNumber": "997-6670",
-    "CarrierID": "ABA", "Weight": "500", "Height": "48", "Length": "36", "Width": "72", "AESNumber": "NA"},
-    {"SAPShipmentNumber": "908", "PlannedShipDate": "2023-06-29", "CustomerID": "CC4001", "PartNumber": "997-3450",
-    "CarrierID": "UPS", "Weight": "1500", "Height": "60", "Length": "60", "Width": "60", "AESNumber": "X2023062854321"},
-    {"SAPShipmentNumber": "910", "PlannedShipDate": "2023-07-02", "CustomerID": "CC5001", "PartNumber": "998-1150",
-    "CarrierID": "FDX", "Weight": "3500", "Height": "121", "Length": "101", "Width": "105", "AESNumber": "X2023070112345"},
-    {"SAPShipmentNumber": "999", "PlannedShipDate": "2023-07-14", "CustomerID": "CC5001", "PartNumber": "999-1150",
-    "CarrierID": "FDX", "Weight": "3500", "Height": "121", "Length": "101", "Width": "105", "AESNumber": "X2023070112345"}
-];
-
+var mockdata = [
+{"sapshipmentnumber": "900", "plannedshipdate": "2023-06-20", "customerid": "CA1006", "partnumber": "997-3450",
+"carrierid": "XYZ", "weight": "1500", "height": "60", "length": "60", "width": "60", "aesnumber": "NA"},
+{"sapshipmentnumber": "901", "plannedshipdate": "2023-06-25", "customerid": "CB1001", "partnumber": "997-6670",
+"carrierid": "ABA", "weight": "500", "height": "48", "length": "36", "width": "72", "aesNumber": "NA"},
+{"sapshipmentnumber": "908", "plannedshipdate": "2023-06-29", "customerid": "CC4001", "partnumber": "997-3450",
+"carrierid": "UPS", "weight": "1500", "height": "60", "length": "60", "width": "60", "aesNumber": "X2023062854321"},
+{"sapshipmentnumber": "910", "plannedshipdate": "2023-07-02", "customerid": "CC5001", "partnumber": "998-1150",
+"carrierid": "FDX", "weight": "3500", "height": "121", "length": "101", "width": "105", "aesNumber": "X2023070112345"},
+{"sapshipmentnumber": "999", "plannedshipdate": "2023-07-14", "customerid": "CC5001", "partnumber": "999-1150",
+"carrierid": "FDX", "weight": "3500", "height": "121", "length": "101", "width": "105", "aesNumber": "X2023070112345"},];   
 document.addEventListener('DOMContentLoaded', function() {
-    var tableBody = document.getElementById("shipment-table").getElementsByTagName("tbody")[0];
-    var rowsHTML = "";
-
-    for (var i = 0; i < mockdata.length; i++) {
-        var shipment = mockdata[i];
-        rowsHTML += "<tr>" +
-            "<td>" + shipment.SAPShipmentNumber + "</td>" +
-            "<td>" + shipment.PlannedShipDate + "</td>" +
-            "<td>" + shipment.CustomerID + "</td>" +
-            "<td>" + shipment.PartNumber + "</td>" +
-            "<td>" + shipment.CarrierID + "</td>" +
-            "<td>" + shipment.Weight + "</td>" +
-            "<td>" + shipment.Height + "</td>" +
-            "<td>" + shipment.Length + "</td>" +
-            "<td>" + shipment.Width + "</td>" +
-            "<td>" + shipment.AESNumber + "</td>" +
-            "</tr>";
-    }
-
-    tableBody.innerHTML = rowsHTML;
-});
+var tableBody = document.getElementById("shipment-table").getElementsByTagName("tbody")[0];
+var rowsHTML = "";
+for (var i = 0; i < mockdata.length; i++) {
+var shipment = mockdata[i];
+rowsHTML += "<tr>" +
+"<td>" + shipment.sapshipmentNumber + "</td>" +
+"<td>" + shipment.plannedshipdate + "</td>" +
+"<td>" + shipment.customerid + "</td>" +
+"<td>" + shipment.partnumber + "</td>" +
+"<td>" + shipment.carrierid + "</td>" +
+"<td>" + shipment.weight + "</td>" +
+"<td>" + shipment.height + "</td>" +
+"<td>" + shipment.length + "</td>" +
+"<td>" + shipment.width + "</td>" +
+"<td>" + shipment.aesnumber + "</td>" +
+"</tr>";}
+tableBody.innerHTML = rowsHTML;});
