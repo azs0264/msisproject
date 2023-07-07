@@ -7,24 +7,23 @@ var mockdata = [
 "carrierid": "UPS", "weight": "1500", "height": "60", "length": "60", "width": "60", "aesNumber": "X2023062854321"},
 {"sapshipmentNumber": "910", "plannedshipdate": "2023-07-02", "customerid": "CC5001", "partnumber": "998-1150",
 "carrierid": "FDX", "weight": "3500", "height": "121", "length": "101", "width": "105", "aesNumber": "X2023070112345"},
-];   
-
+{"sapshipmentNumber": "999", "plannedshipdate": "2023-07-14", "customerid": "CC5001", "partnumber": "999-1150",
+"carrierid": "FDX", "weight": "3500", "height": "121", "length": "101", "width": "105", "aesNumber": "X2023070112345"},];   
 document.addEventListener('DOMContentLoaded', function() {
 var tableBody = document.getElementById("shipment-table").getElementsByTagName("tbody")[0];
 var rowsHTML = "";
 for (var i = 0; i < mockdata.length; i++) {
 var shipment = mockdata[i];
 rowsHTML += "<tr>" +
-"<td>" + shipment.sapShipmentNumber + "</td>" +
-"<td>" + shipment.plannedShipDate + "</td>" +
-"<td>" + shipment.customerId + "</td>" +
-"<td>" + shipment.partNumber + "</td>" +
+"<td>" + shipment.sapshipmentnumber + "</td>" +
+"<td>" + shipment.plannedshipdate + "</td>" +
+"<td>" + shipment.customerid + "</td>" +
+"<td>" + shipment.partnumber + "</td>" +
 "<td>" + shipment.carrierid + "</td>" +
 "<td>" + shipment.weight + "</td>" +
 "<td>" + shipment.height + "</td>" +
 "<td>" + shipment.length + "</td>" +
 "<td>" + shipment.width + "</td>" +
-"<td>" + shipment.aesNumber + "</td>" +
+"<td>" + shipment.aesnumber + "</td>" +
 "</tr>";}
-tableBody.innerHTML = rowsHTML;}
-);
+tableBody.innerHTML = rowsHTML;});
