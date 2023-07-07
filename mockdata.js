@@ -1,14 +1,17 @@
 var mockdata = [
-{"sapShipmentNumber": "900", "plannedShipDate": "2023-06-20", "customerId": "CA1006", "partNumber": "997-3450",
-"carrierid": "XYZ", "weight": "1500", "height": "60", "length": "60", "width": "60", "aesNumber": "NA"},
+{"sapshipmentNumber": "900", "plannedshipdate": "2023-06-20", "customerid": "CA1006", "partnumber": "997-3450",
+"carrierid": "XYZ", "weight": "1500", "height": "60", "length": "60", "width": "60", "aesnumber": "NA"},
 
-{"sapShipmentNumber": "901", "plannedShipDate": "2023-06-25", "customerId": "CB1001", "partNumber": "997-6670",
+{"sapshipmentNumber": "901", "plannedshipdate": "2023-06-25", "customerid": "CB1001", "partnumber": "997-6670",
 "carrierid": "ABA", "weight": "500", "height": "48", "length": "36", "width": "72", "aesNumber": "NA"},
 
-{"sapShipmentNumber": "908", "plannedShipDate": "2023-06-29", "customerId": "CC4001", "partNumber": "997-3450",
+{"sapshipmentNumber": "908", "plannedshipdate": "2023-06-29", "customerid": "CC4001", "partnumber": "997-3450",
 "carrierid": "UPS", "weight": "1500", "height": "60", "length": "60", "width": "60", "aesNumber": "X2023062854321"},
 
-{"sapShipmentNumber": "910", "plannedShipDate": "2023-07-02", "customerId": "CC5001", "partNumber": "998-1150",
+{"sapshipmentNumber": "910", "plannedshipdate": "2023-07-02", "customerid": "CC5001", "partnumber": "998-1150",
+"carrierid": "FDX", "weight": "3500", "height": "121", "length": "101", "width": "105", "aesNumber": "X2023070112345"},
+
+{"sapshipmentNumber": "999", "plannedshipdate": "2023-07-14", "customerid": "CC5001", "partnumber": "999-1150",
 "carrierid": "FDX", "weight": "3500", "height": "121", "length": "101", "width": "105", "aesNumber": "X2023070112345"},
 ];   
 
