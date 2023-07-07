@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-    </style>
-</head>
-<body>
-    <table id="shipment-table">
-        <thead>
-            <tr>
-                <th>SAP Shipment Number</th>
-                <th>Planned Ship Date</th>
-                <th>Customer ID</th>
-                <th>Part Number</th>
-                <th>Carrier ID</th>
-                <th>Weight</th>
-                <th>Height</th>
-                <th>Length</th>
-                <th>Width</th>
-                <th>AES Number</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
 
-    <script>
     var mockdata = [
     {"SAPShipmentNumber": "900", "PlannedShipDate": "2023-06-20", "CustomerID": "CA1006", "PartNumber": "997-3450",
     "CarrierID": "XYZ", "Weight": "1500", "Height": "60", "Length": "60", "Width": "60", "AESNumber": "NA"},
@@ -68,6 +34,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     tableBody.innerHTML = rowsHTML;
 });
-    </script>
-</body>
-</html>
