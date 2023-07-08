@@ -1,30 +1,36 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .print-button {
-            margin-bottom: 20px;
-        }
-        .next-button {
-            margin-left: 20px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Processed ASN</h1>
-    <div id="display-data">
-        <p>SAP Shipment Number: <span id="sap-shipment-number"></span></p>
-        <p>Planned Ship Date: <span id="planned-ship-date"></span></p>
-        <p>Customer ID: <span id="customer-id"></span></p>
-        <p>Part Number: <span id="part-number"></span></p>
-        <p>Weight (in lbs.): <span id="weight"></span></p>
-        <p>Height: <span id="height"></span></p>
-        <p>Length: <span id="length"></span></p>
-        <p>Width: <span id="width"></span></p>
-        <p>AES Number (if applicable): <span id="aes-number"></span></p>
-    </div>
-    <button class="print-button" onclick="window.print()">Print</button>
-    <button class="next-button" onclick="window.location.href = 'https://azs0264.github.io/msisproject/schedule-shipment.html'">Next</button>
-</body>
-</html>
+<html></html><head></head>
+<title>Processed ASN</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<style></style>
+</head><body></body>
+<h1>Processed ASN</h1>
+<table id="asn-table"><tr>
+<th>Field</th>
+<th>Value</th>
+</tr></table>
+<button onclick="window.print()">Print</button>
+<button onclick="window.location.href = 'schedule-shipment.html'">Next</button> 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+var urlParams = new URLSearchParams(window.location.search);
+var sapShipmentNumber = urlParams.get("sapShipmentNumber");
+var plannedShipDate = urlParams.get("plannedShipDate");
+var customerId = urlParams.get("customerId");
+var partNumber = urlParams.get("partNumber");
+var weight = urlParams.get("weight");
+var height = urlParams.get("height");
+var length = urlParams.get("length");
+var width = urlParams.get("width");
+var aesNumber = urlParams.get("aesNumber");
+var tableHTML = "<tr><td>SAP Shipment Number:</td><td>" + sapShipmentNumber + "</td></tr>" +
+"<tr><td>Planned Ship Date:</td><td>" + plannedShipDate + "</td></tr>" +
+"<tr><td>Customer ID:</td><td>" + customerId + "</td></tr>" +
+"<tr><td>Part Number:</td><td>" + partNumber + "</td></tr>" +
+"<tr><td>Weight:</td><td>" + weight + "</td></tr>" +
+"<tr><td>Height:</td><td>" + height + "</td></tr>" +
+"<tr><td>Length:</td><td>" + length + "</td></tr>" +
+"<tr><td>Width:</td><td>" + width + "</td></tr>" +
+"<tr><td>AES Number:</td><td>" + aesNumber + "</td></tr>";
+document.getElementById("asn-table").innerHTML += tableHTML;});
+</script></body></html>
