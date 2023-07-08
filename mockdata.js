@@ -1,6 +1,6 @@
 var mockdata = [
 {"sapShipmentNumber": "900", "plannedshipdate": "2023-06-20", "customerid": "CA1006", "partnumber": "997-3450",
-"carrierid": "XYZ", "weight": "1500", "height": "60", "length": "60", "width": "60", "aesnumber": "NA"},
+"carrierid": "XYZ", "weight": "1500", "height": "60", "length": "60", "width": "60", "aesNumber": "NA"},
 {"sapShipmentNumber": "901", "plannedshipdate": "2023-06-25", "customerid": "CB1001", "partnumber": "997-6670",
 "carrierid": "ABA", "weight": "500", "height": "48", "length": "36", "width": "72", "aesNumber": "NA"},
 {"sapShipmentNumber": "908", "plannedshipdate": "2023-06-29", "customerid": "CC4001", "partnumber": "997-3450",
@@ -24,6 +24,6 @@ rowsHTML += "<tr>" +
 "<td>" + shipment.height + "</td>" +
 "<td>" + shipment.length + "</td>" +
 "<td>" + shipment.width + "</td>" +
-"<td>" + shipment.aesnumber + "</td>" +
+"<td>" + shipment.aesNumber + "</td>" +
 "</tr>";}
 tableBody.innerHTML = rowsHTML;});

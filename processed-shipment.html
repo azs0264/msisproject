@@ -33,6 +33,6 @@ var tableHTML = "<table>" +
 "<tr><td>Width:</td><td>" + width + "</td></tr>" +
 "<tr><td>Loading Dock Required:</td><td>" + loadingDockRequired + "</td></tr>" + "</table>";
 document.getElementById("shipment-data").innerHTML = tableHTML;});
-function printShipment() {console.log("Printing shipment...");}
+function printShipment() {window.print();}
 function confirmShipment() {window.location.href = "booking-processed.html";}
 </script></body></html>
