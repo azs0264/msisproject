@@ -30,14 +30,7 @@ var url = "processed-asn.html" +
 "&height=" + encodeURIComponent(height) +
 "&length=" + encodeURIComponent(length) +
 "&width=" + encodeURIComponent(width) +
-"&aesNumber=" + encodeURIComponent(aesNumber);
-var barcodeValue = sapShipmentNumber; // or any other value you want to use
-var barcodeOptions = {
-  format: "CODE128",
-  displayValue: true
-};
-JsBarcode("#barcode", barcodeValue, barcodeOptions);
-window.location.href = url;});});
+"&aesNumber=" + encodeURIComponent(aesNumber);});});
 
 document.addEventListener('DOMContentLoaded', function() {
 var bookingForm = document.getElementById("booking-form");

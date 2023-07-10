@@ -2,7 +2,6 @@
 <html></html><head></head>
 <title>Processed ASN</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/jsbarcode.min.js"></script>
 <style></style>
 </head><body></body>
 <h1>Processed ASN</h1>
@@ -34,7 +33,5 @@ var tableHTML = "<tr><td>SAP Shipment Number:</td><td>" + sapShipmentNumber + "<
 "<tr><td>Length:</td><td>" + length + "</td></tr>" +
 "<tr><td>Width:</td><td>" + width + "</td></tr>" +
 "<tr><td>AES Number:</td><td>" + aesNumber + "</td></tr>";
-document.getElementById("asn-table").innerHTML += tableHTML;
-var barcodeCanvas = document.getElementById('barcode');
-JsBarcode(barcodeCanvas, sapShipmentNumber);});
+document.getElementById("asn-table").innerHTML += tableHTML;});
 </script></body></html>
