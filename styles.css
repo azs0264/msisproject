@@ -1,16 +1,17 @@
 h1 {font-size: 24px; text-align: center;}
 p {text-align: center;}
 footer {text-align: center; font-size: 12px; color: grey;}
-
 #asn-table{border-collapse: collapse; width: 100%;}
 #asn-table th, #asn-table td {padding: 8px; border-bottom: 1px solid white;}
 #asn-table th {text-align: left;}
 #asn-table tr:last-child td {border-bottom: none;}
-
+#booking-form{border-collapse: collapse; width: 100%;}
+#booking-form th, #booking-form td {padding: 8px; border-bottom: 1px solid white;}
+#booking-form th {text-align: left;}
+#booking-form tr:last-child td {border-bottom: none;}
 .form-container {display: flex; flex-direction: column;}
 .form-group {display: flex; flex-direction: column;}
 form {display: flex; flex-direction: column; align-items: flex-start;}
-
 label {margin-bottom: 10px;}
 input[type="text"], 
 input[type="date"],
