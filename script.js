@@ -6,12 +6,10 @@ var userId = document.getElementById("user-id").value;
 var password = document.getElementById("password").value;
 if (userId === "Administrator" && password === "Testuser") {
 window.location.href = "https://azs0264.github.io/msisproject/mainpage.html"; } else {
-alert("Invalid credentials. Please try again.");}});
-});
+alert("Invalid credentials. Please try again.");}});});
 
 document.addEventListener('DOMContentLoaded', function() {
 var newAsnForm = document.getElementById("new-asn-form");
-
 newAsnForm.addEventListener("submit", function(event) {
 event.preventDefault(); console.log("Form submitted");
 var sapShipmentNumber = document.getElementById("sap-shipment-number").value;
@@ -33,16 +31,19 @@ var url = "processed-asn.html" +
 "&length=" + encodeURIComponent(length) +
 "&width=" + encodeURIComponent(width) +
 "&aesNumber=" + encodeURIComponent(aesNumber);
-window.location.href = url;});
-});
+var barcodeValue = sapShipmentNumber; // or any other value you want to use
+var barcodeOptions = {
+  format: "CODE128",
+  displayValue: true
+};
+JsBarcode("#barcode", barcodeValue, barcodeOptions);
+window.location.href = url;});});
 
 document.addEventListener('DOMContentLoaded', function() {
 var bookingForm = document.getElementById("booking-form");
-
 bookingForm.addEventListener("submit", function(event) {
 event.preventDefault();
 console.log("Form submitted");
-
 var sapShipmentNumber = document.getElementById("sap-shipment-number").value;
 var readyShipDate = document.getElementById("ready-ship-date").value;
 var carrierId = document.getElementById("carrier-id").value;
@@ -66,5 +67,4 @@ localStorage.setItem("height", height);
 localStorage.setItem("length", length);
 localStorage.setItem("width", width);
 localStorage.setItem("loadingDockRequired", loadingDockRequired);
-window.location.href = "processed-shipment.html";});
-});
+window.location.href = "processed-shipment.html";});});
