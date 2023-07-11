@@ -30,7 +30,8 @@ var url = "processed-asn.html" +
 "&height=" + encodeURIComponent(height) +
 "&length=" + encodeURIComponent(length) +
 "&width=" + encodeURIComponent(width) +
-"&aesNumber=" + encodeURIComponent(aesNumber);});});
+"&aesNumber=" + encodeURIComponent(aesNumber);
+window.location.href = url;});});
 
 document.addEventListener('DOMContentLoaded', function() {
 var bookingForm = document.getElementById("booking-form");
