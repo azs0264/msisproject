@@ -9,6 +9,15 @@ footer {text-align: center; font-size: 12px; color: grey;}
 #booking-form th, #booking-form td {padding: 8px; border-bottom: 1px solid white;}
 #booking-form th {text-align: left;}
 #booking-form tr:last-child td {border-bottom: none;}
+#shipment-table {border-collapse: collapse;width: 100%;}
+#shipment-table th, #shipment-table td {padding: 8px;border-bottom: 1px solid white;}
+#shipment-table th {text-align: left;}
+#shipment-table tr:last-child td {border-bottom: none;}
+#shipment-table td {background-color: rgb(168, 196, 233);}
+#shipment-table tr:nth-child(even) {background-color: rgb(101, 101, 254);color: white;}
+#shipment-table th,
+#shipment-table td {border-bottom: 1px solid white; border-right: 1px solid white;}
+#shipment-table tr:last-child td {border-bottom: none;}
 .form-container {display: flex; flex-direction: column;}
 .form-group {display: flex; flex-direction: column;}
 form {display: flex; flex-direction: column; align-items: flex-start;}

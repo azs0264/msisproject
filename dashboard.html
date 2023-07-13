@@ -1,7 +1,27 @@
 <!DOCTYPE html> 
 <html></html><head></head>
 <title>Dashboard</title>
-<style></style>
+<style>
+h1 {font-size: 24px; text-align: center;}
+p {text-align: center;}
+footer {
+text-align: center;
+font-size: 12px;
+color: grey;}
+#shipment-table {border-collapse: collapse; width: 100%;}
+#shipment-table th,
+#shipment-table td {
+padding: 8px;
+border-bottom: 1px solid white;}
+#shipment-table th {text-align: left;}
+#shipment-table tr:last-child td {border-bottom: none;}
+#shipment-table td {background-color: rgb(168, 196, 233);}
+#shipment-table tr:nth-child(even) {background-color: rgb(101, 101, 254);color: white;}
+#shipment-table th,
+#shipment-table td {border-bottom: 1px solid white;
+border-right: 1px solid white;}
+#shipment-table tr:last-child td {border-bottom: none;}
+</style>
 <head></head><body></body>
 <h1>Dashboard</h1>
 <table id="shipment-table">
@@ -16,26 +36,23 @@
 <th>Length</th>
 <th>Width</th>
 </thead><tbody></tbody></table>
-
 <script src="mockdata.js"></script>
 <button onclick="goBack()">Back</button><script>
-  function goBack(){window.location.href = "https://azs0264.github.io/msisproject/mainpage.html";}
+function goBack(){window.location.href = "https://azs0264.github.io/msisproject/mainpage.html";}
 document.addEventListener('DOMContentLoad', function() {
-  var shipmentdata = JSON.parse(localStorage.getItem("shipmentdata"));
-  var tablebody = document.getElementById("shipment-table").getElementsByTagName("tbody")[0];
-  var rowsHTML = "";
-  for (var i = 0; i < shipmentdata.length; i++) {var shipment = shipmentdata[i];
-  rowsHTML += "<tr>" + 
-  "<td>" + shipment.sapshipmentnumber + "</td>" +
-  "<td>" + shipment.plannedshipdate + "</td>" +
-  "<td>" + shipment.customerid + "</td>" +
-  "<td>" + shipment.partnumber + "</td>" +
-  "<td>" + shipment.carrierid + "</td>" +
-  "<td>" + shipment.weight + "</td>" + 
-  "<td>" + shipment.height + "</td>" +
-  "<td>" + shipment.length + "</td>" + 
-  "<td>" + shipment.width + "</td>" + "</tr>"}
-    tablebody.innerHTML = rowsHTML;
-} )
-
+var shipmentdata = JSON.parse(localStorage.getItem("shipmentdata"));
+var tablebody = document.getElementById("shipment-table").getElementsByTagName("tbody")[0];
+var rowsHTML = "";
+for (var i = 0; i < shipmentdata.length; i++) {var shipment = shipmentdata[i];
+rowsHTML += "<tr>" + 
+"<td>" + shipment.sapshipmentnumber + "</td>" +
+"<td>" + shipment.plannedshipdate + "</td>" +
+"<td>" + shipment.customerid + "</td>" +
+"<td>" + shipment.partnumber + "</td>" +
+"<td>" + shipment.carrierid + "</td>" +
+"<td>" + shipment.weight + "</td>" + 
+"<td>" + shipment.height + "</td>" +
+"<td>" + shipment.length + "</td>" + 
+"<td>" + shipment.width + "</td>" + "</tr>"}
+tablebody.innerHTML = rowsHTML;} )
 </script></body></html>
