@@ -1,24 +1,16 @@
 h1 {font-size: 24px; text-align: center;}
 p {text-align: center;}
 footer {text-align: center; font-size: 12px; color: grey;}
-
-#asn-table {border-collapse: collapse;width: 100%;}
-#asn-table th,
-#asn-table td {padding: 8px;border-bottom: 1px solid white;}
+#asn-table{border-collapse: collapse; width: 100%;}
+#asn-table th, #asn-table td {padding: 8px; border-bottom: 1px solid white;}
 #asn-table th {text-align: left;}
-#asn-table tr:last-child td {border-bottom: none;}
-#asn-table td {background-color: rgb(168, 196, 233);}
-#asn-table tr:nth-child(even) {background-color: rgb(101, 101, 254);color: white;}
-#asn-table th,
-#asn-table td {border-bottom: 1px solid white;border-right: 1px solid white;}
 #asn-table tr:last-child td {border-bottom: none;}
 #booking-form{border-collapse: collapse; width: 100%;}
 #booking-form th, #booking-form td {padding: 8px; border-bottom: 1px solid white;}
 #booking-form th {text-align: left;}
 #booking-form tr:last-child td {border-bottom: none;}
 #shipment-table {border-collapse: collapse;width: 100%;}
-#shipment-table th, 
-#shipment-table td {padding: 8px;border-bottom: 1px solid white;}
+#shipment-table th, #shipment-table td {padding: 8px;border-bottom: 1px solid white;}
 #shipment-table th {text-align: left;}
 #shipment-table tr:last-child td {border-bottom: none;}
 #shipment-table td {background-color: rgb(168, 196, 233);}
@@ -26,10 +18,11 @@ footer {text-align: center; font-size: 12px; color: grey;}
 #shipment-table th,
 #shipment-table td {border-bottom: 1px solid white; border-right: 1px solid white;}
 #shipment-table tr:last-child td {border-bottom: none;}
-
 .form-container {display: flex; flex-direction: column;}
 .form-group {display: flex; flex-direction: column;}
 form {display: flex; flex-direction: column; align-items: flex-start;}
 label {margin-bottom: 10px;}
-input[type="text"], input[type="date"],
-select, textarea {width: 100%; max-width: 250px; color: grey;}
+input[type="text"], 
+input[type="date"],
+select, 
+textarea {width: 100%; max-width: 250px; color: grey;}
