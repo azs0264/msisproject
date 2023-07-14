@@ -9,17 +9,18 @@
 <button onclick="printShipment()">Print</button>
 <button onclick="confirmShipment()">Confirm</button><script>
 document.addEventListener('DOMContentLoaded', function() {
-var sapShipmentNumber = localStorage.getItem("sapShipmentNumber");
-var readyShipDate = localStorage.getItem("readyShipDate");
-var carrierId = localStorage.getItem("carrierId");
-var prepaidCollect = localStorage.getItem("prepaidCollect");
-var priorityEconomy = localStorage.getItem("priorityEconomy");
-var productDescription = localStorage.getItem("productDescription");
-var weight = localStorage.getItem("weight");
-var height = localStorage.getItem("height");
-var length = localStorage.getItem("length");
-var width = localStorage.getItem("width");
-var loadingDockRequired = localStorage.getItem("loadingDockRequired");
+var urlParams = new URLSearchParams(window.location.search);
+var sapShipmentNumber = urlParams.get("sapShipmentNumber");
+var readyShipDate = urlParams.get("readyShipDate");
+var carrierId = urlParams.get("carrierId");
+var prepaidCollect = urlParams.get("prepaidCollect");
+var priorityEconomy = urlParams.get("priorityEconomy");
+var productDescription = urlParams.get("productDescription");
+var weight = urlParams.get("weight");
+var height = urlParams.get("height");
+var length = urlParams.get("length");
+var width = urlParams.get("width");
+var loadingDockRequired = urlParams.get("loadingDockRequired");
 var tableHTML = "<table>" +
 "<tr><td>SAP Shipment Number:</td><td>" + sapShipmentNumber + "</td></tr>" +
 "<tr><td>Ready Ship Date:</td><td>" + readyShipDate + "</td></tr>" +
@@ -31,7 +32,8 @@ var tableHTML = "<table>" +
 "<tr><td>Height:</td><td>" + height + "</td></tr>" +
 "<tr><td>Length:</td><td>" + length + "</td></tr>" +
 "<tr><td>Width:</td><td>" + width + "</td></tr>" +
-"<tr><td>Loading Dock Required:</td><td>" + loadingDockRequired + "</td></tr>" + "</table>";
+"<tr><td>Loading Dock Required:</td><td>" + loadingDockRequired + "</td></tr>" +
+"</table>";
 document.getElementById("shipment-data").innerHTML = tableHTML;});
 function printShipment() {window.print();}
 function confirmShipment() {window.location.href = "booking-processed.html";}
