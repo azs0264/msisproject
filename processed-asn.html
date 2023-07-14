@@ -14,23 +14,23 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 var urlParams = new URLSearchParams(window.location.search);
-var sapshipmentnumber = urlParams.get("sapshipmentnumber");
-var plannedshipdate = urlParams.get("plannedshipdate");
-var customerid = urlParams.get("customerid");
-var partnumber = urlParams.get("partnumber");
+var sapShipmentNumber = urlParams.get("sapShipmentNumber");
+var plannedShipDate = urlParams.get("plannedShipDate");
+var customerId = urlParams.get("customerId");
+var partNumber = urlParams.get("partNumber");
 var weight = urlParams.get("weight");
 var height = urlParams.get("height");
 var length = urlParams.get("length");
 var width = urlParams.get("width");
-var aesnumber = urlParams.get("aesnumber");
-var tableHTML = "<tr><td>SAP Shipment Number:</td><td>" + sapshipmentnumber + "</td></tr>" +
-"<tr><td>Planned Ship Date:</td><td>" + plannedshipdate + "</td></tr>" +
-"<tr><td>Customer ID:</td><td>" + customerid + "</td></tr>" +
-"<tr><td>Part Number:</td><td>" + partnumber + "</td></tr>" +
+var aesNumber = urlParams.get("aesNumber");
+var tableHTML = "<tr><td>SAP Shipment Number:</td><td>" + sapShipmentNumber + "</td></tr>" +
+"<tr><td>Planned Ship Date:</td><td>" + plannedShipDate + "</td></tr>" +
+"<tr><td>Customer ID:</td><td>" + customerId + "</td></tr>" +
+"<tr><td>Part Number:</td><td>" + partNumber + "</td></tr>" +
 "<tr><td>Weight:</td><td>" + weight + "</td></tr>" +
 "<tr><td>Height:</td><td>" + height + "</td></tr>" +
 "<tr><td>Length:</td><td>" + length + "</td></tr>" +
 "<tr><td>Width:</td><td>" + width + "</td></tr>" +
-"<tr><td>AES Number:</td><td>" + aesnumber + "</td></tr>";
+"<tr><td>AES Number:</td><td>" + aesNumber + "</td></tr>";
 document.getElementById("asn-table").innerHTML += tableHTML;});
 </script></body></html>

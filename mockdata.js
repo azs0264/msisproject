@@ -25,7 +25,7 @@ var rowsHTML = "";
 for (var i = 0; i < mockdata.length; i++) {
 var shipment = mockdata[i];
 rowsHTML += "<tr>" +
-"<td>" + shipment.sapshipmentnumber + "</td>" +
+"<td>" + shipment.sapShipmentNumber + "</td>" +
 "<td>" + shipment.plannedshipdate + "</td>" +
 "<td>" + shipment.customerid + "</td>" +
 "<td>" + shipment.partnumber + "</td>" +
@@ -36,3 +36,4 @@ rowsHTML += "<tr>" +
 "<td>" + shipment.width + "</td>" +
 "</tr>";}
 tableBody.innerHTML = rowsHTML;});
+    
