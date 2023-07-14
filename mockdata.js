@@ -25,7 +25,7 @@ var rowsHTML = "";
 for (var i = 0; i < mockdata.length; i++) {
 var shipment = mockdata[i];
 rowsHTML += "<tr>" +
-"<td>" + shipment.sapShipmentNumber + "</td>" +
+"<td>" + shipment.sapshipmentnumber + "</td>" +
 "<td>" + shipment.plannedshipdate + "</td>" +
 "<td>" + shipment.customerid + "</td>" +
 "<td>" + shipment.partnumber + "</td>" +
