@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html></html><head>
+<html></html><head></head>
 <title>Processed Shipment</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <style></style>
-</head><body></body>
+</head><body>
 <h1>Processed Shipment</h1>
-<table id="shipment-data"></tr>
-<th>Field</th>
-<th>Value</th>
-</tr></table>
-<button onclick="window.print()">Print</button>
-<button onclick="window.location.href = 'booking-processed.html'">Next</button> 
-<script>
+<div id="shipment-data"></div>
+<button onclick="printShipment()">Print</button>
+<button onclick="confirmShipment()">Confirm</button><script>
 document.addEventListener('DOMContentLoaded', function() {
 var sapShipmentNumber = localStorage.getItem("sapShipmentNumber");
 var readyShipDate = localStorage.getItem("readyShipDate");
